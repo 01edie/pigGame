@@ -1,0 +1,210 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600&display=swap');
+/* global css */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 18px;
+}
+body{
+  font-family: 'Radio Canada', sans-serif;
+  background: linear-gradient(to right, rgb(31, 30, 30), gray);
+  width: 100%;
+  height: 100vh;
+  color: white;
+  user-select: none;
+}
+
+/* project css */
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* game container */
+.game-container{
+  width: 80%;
+  height: 80%;
+  backdrop-filter: brightness(1.75);
+  border-radius: 2px 1rem 1rem 2px;
+  -webkit-border-radius: 2px 1rem 1rem 2px;
+  -moz-border-radius: 2px 1rem 1rem 2px;
+  -ms-border-radius: 2px 1rem 1rem 2px;
+  -o-border-radius: 2px 1rem 1rem 2px;
+  display: flex;
+  position: relative;
+}
+.player-1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.player-2{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+.player-name{
+  font-size: 2.5rem;
+}
+.current-score{
+  font-size: 2.5rem;
+}
+.score-div{
+  width: 12rem;
+  height: 7rem;
+  background-color: rgba(224, 224, 252,0.5);
+  /* color: black; */
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+
+/* buttons */
+
+.main-dice{
+  position: absolute;
+}
+.btn{
+  color: lavender;
+  font-size: 1.5rem;
+  background-color: rgba(0,0,0,0.25);
+  padding: 0.65rem;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  -ms-border-radius: 0.35rem;
+  -o-border-radius: 0.35rem;
+  transform:translate(-50%,0);
+  -webkit-transform:translate(-50%,0);
+  -moz-transform:translate(-50%,0);
+  -ms-transform:translate(-50%,0);
+  -o-transform:translate(-50%,0);
+  box-shadow: 1px 2px 3px 2px rgba(255,255,255,0.15);
+  font-family: inherit;
+}
+.btn:hover{
+  background-color: rgba(0,0,0,0.5);
+}
+.btn:active{
+  box-shadow: none;
+  color: #4bb9ba;
+}
+.new-game-btn{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  
+}
+.roll-btn{
+  position: absolute;
+  top: 68%;
+  left: 50%;
+}
+.hold-btn{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+
+}
+.winner-text{
+  position: absolute;
+  color: green;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-size: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(216, 231, 245,0.5);
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.active{
+  background-color: rgba(36, 255, 255,0.5);
+}
+.hidden{
+  visibility: hidden;
+}
+.winner{
+  background-color: rgba(18, 170, 18,0.5);
+}
+
+.main-dice{
+  width: 5rem;
+  height: 5rem;
+  background: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+/* rules container */
+.rules-container{
+  position: absolute;
+}
+
+
+
+@media(max-width: 1024px){
+  html{
+    font-size: 14px;
+  }
+}
+@media(max-width: 786px){
+  html{
+    font-size: 12px;
+  }
+  .roll-btn{
+    top: 80%;
+
+  }
+  .hold-btn{
+    top: 90%;
+  }
+  .score-div{
+    width: 10rem;
+    height: 5rem;
+  }
+}

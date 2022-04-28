@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pig Game">
+  <title>Pig Game</title>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css" integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <div class="game-container">
+      <div class="player-1 active">
+        <p class="player-name">player 1</p>
+        <p class="current-score" id="current-score-player-1">0</p>
+        <div class="score-div">
+          <p>CURRENT</p>
+          <span class="saved-score" id="saved-score-player-1">0</span>
+        </div>
+      </div>
+      <div class="player-2">
+        <p class="player-name">player 2</p>
+        <p class="current-score" id="current-score-player-2">0</p>
+        <div class="score-div">
+          <p>CURRENT</p>
+          <span class="saved-score" id="saved-score-player-2">0</span>
+        </div>
+      </div>
+      <img src="./images/dice-1.png" alt="dice" class="main-dice hidden">
+      <button class="new-game-btn btn"><i class="fa-solid fa-power-off"></i> New Game</button>
+      <button class="roll-btn btn"><i class="fa-solid fa-gamepad"></i> Roll Dice</button>
+      <button class="hold-btn btn"><i class="fa-solid fa-champagne-glasses"></i> Hold</button>
+      <p class="winner-text">player-1 wins</p>
+    </div>
+    <div class="rules-container"></div>
+  </main>
+
+
+
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -183,8 +183,82 @@ body{
 /* rules container */
 .rules-container{
   position: absolute;
+  padding: 1.5rem;
+  max-width: 60%;
+  backdrop-filter: brightness(1.5);
+  border-radius: 0 0.5rem 0 0.5rem;
+  -webkit-border-radius: 0 0.5rem 0 0.5rem;
+  -moz-border-radius: 0 0.5rem 0 0.5rem;
+  -ms-border-radius: 0 0.5rem 0 0.5rem;
+  -o-border-radius: 0 0.5rem 0 0.5rem;
+}
+.close{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.game-rules{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
+.player-information{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.player-names{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.player-input-div{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.player-input{
+  width: 70%;
+  height: 2rem;
+  border-radius: 0 5px 5px 5px;
+  -webkit-border-radius: 0 5px 5px 5px;
+  -moz-border-radius: 0 5px 5px 5px;
+  -ms-border-radius: 0 5px 5px 5px;
+  -o-border-radius: 0 5px 5px 5px;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-family: inherit;
+  font-size: 1.25rem;
+}
+
+.play-button{
+  width: 30%;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play-button:active{
+  box-shadow: 1px 1px 1px 2px rgba(0,0,0,0.25);
+}
+.error-message{
+  color: rgb(255, 208, 208);
+}
 
 
 @media(max-width: 1024px){
@@ -206,5 +280,9 @@ body{
   .score-div{
     width: 10rem;
     height: 5rem;
+  }
+  .play-button{
+    width: 40%;
+    height: 3rem;
   }
 }
